@@ -2,7 +2,7 @@
 myData Java API in JXB.
 The Java API was created based on version 0.6 of the XSD schemas.
 
-Follows the main code that produces an XML incvoice document
+Follows the main JAVA code of an example service invoice to produce an XML incvoice document:
 ```java
 package com.mycompany.mydatatest;
 
@@ -106,5 +106,49 @@ public class AadeToXml {
 }
 ```
 
+The produced XML:
+```
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<InvoicesDoc xmlns="http://www.aade.gr/myDATA/invoice/v1.0" xmlns:ns2="https://www.aade.gr/myDATA/incomeClassificaton/v1.0" xmlns:ns3="https://www.aade.gr/myDATA/expensesClassificaton/v1.0">
+    <invoice>
+        <issuer>
+            <vatNumber>123456789</vatNumber>
+            <branch>0</branch>
+        </issuer>
+        <counterpart>
+            <vatNumber>999888777</vatNumber>
+            <branch>0</branch>
+        </counterpart>
+        <invoiceHeader>
+            <series>A</series>
+            <aa>0001</aa>
+            <issueDate>2020-10-05</issueDate>
+            <invoiceType>2.1</invoiceType>
+            <currency>EUR</currency>
+        </invoiceHeader>
+        <invoiceDetails>
+            <lineNumber>1</lineNumber>
+            <netValue>1000.0</netValue>
+            <vatCategory>1</vatCategory>
+            <vatAmount>240.0</vatAmount>
+            <withheldAmount>200.0</withheldAmount>
+        </invoiceDetails>
+        <invoiceDetails>
+            <lineNumber>2</lineNumber>
+            <netValue>1000.0</netValue>
+            <vatCategory>1</vatCategory>
+            <vatAmount>240.0</vatAmount>
+            <withheldAmount>200.0</withheldAmount>
+        </invoiceDetails>
+        <invoiceSummary>
+            <totalNetValue>2000.0</totalNetValue>
+            <totalVatAmount>480.0</totalVatAmount>
+            <totalWithheldAmount>400.0</totalWithheldAmount>
+            <totalFeesAmount>0</totalFeesAmount>
+            <totalGrossValue>4080.0</totalGrossValue>
+        </invoiceSummary>
+    </invoice>
+</InvoicesDoc>
+```
 
 
