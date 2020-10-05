@@ -2,7 +2,7 @@
 myData Java API in JXB.
 The Java API was created based on version 0.6 of the XSD schemas.
 
-Follows the main JAVA code of an example service invoice to produce an XML incvoice document:
+Follows the main JAVA code of an example service invoice with 2 lines to produce an XML incvoice document, where org.model.xjc.* is the package that contains all mydata API classes.
 ```java
 package com.mycompany.mydatatest;
 
@@ -26,7 +26,7 @@ import org.model.xjc.*;
 public class AadeToXml {
     public static void main(String[] args) 
     {
-        //Java object. We will convert it to XML.
+        //Work with Java objects and serialize to XML
        PartyType partyType=new PartyType();
        PartyType counterType=new PartyType();
        InvoiceHeaderType invoiceHeader=new InvoiceHeaderType();
@@ -106,7 +106,7 @@ public class AadeToXml {
 }
 ```
 
-The produced XML:
+The output XML:
 ```
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <InvoicesDoc xmlns="http://www.aade.gr/myDATA/invoice/v1.0" xmlns:ns2="https://www.aade.gr/myDATA/incomeClassificaton/v1.0" xmlns:ns3="https://www.aade.gr/myDATA/expensesClassificaton/v1.0">
