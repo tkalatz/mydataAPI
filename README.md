@@ -106,7 +106,7 @@ public class AadeToXml {
 }
 ```
 
-The output XML:
+The produced XML:
 ```
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <InvoicesDoc xmlns="http://www.aade.gr/myDATA/invoice/v1.0" xmlns:ns2="https://www.aade.gr/myDATA/incomeClassificaton/v1.0" xmlns:ns3="https://www.aade.gr/myDATA/expensesClassificaton/v1.0">
